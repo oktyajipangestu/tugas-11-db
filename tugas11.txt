@@ -1,0 +1,13 @@
+select User, Host, Password from user;
+
+1. Buatlah user baru dengan nama Niomic dengan password c0b4d1b4c4!
+create user 'Niomic'@'localhost' identified by 'c0b4d1b4c4!';
+
+2. Ubah password menjadi indonesiaku dengan perintah update set
+UPDATE User SET Password = PASSWORD('indonesiaku') WHERE User = 'Niomic';
+
+3. Berikan hak akses ke user Niomic untuk tabel mahasiswa pada database belajar
+GRANT ALL ON belajar.mahasiswa TO Niomic@localhost;
+
+4. Hapus user Niomic
+DELETE FROM user WHERE User='Niomic';
